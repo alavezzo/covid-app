@@ -29,12 +29,12 @@
     "express-session": "^1.17.2",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.0",
-    "sequelize": "^6.6.5"
+    "sequelize": "^6.6.5",
+    "postcss": "^8.3.6",
+    "autoprefixer": "^10.3.4",
+    "tailwindcss": "^2.2.15"
   },
   "devDependencies": {
-    "autoprefixer": "^10.3.4",
-    "nodemon": "^2.0.12",
-    "postcss": "^8.3.6",
-    "tailwindcss": "^2.2.15"
+    "nodemon": "^2.0.12"
   }
 }
