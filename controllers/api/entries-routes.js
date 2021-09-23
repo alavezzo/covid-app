@@ -5,6 +5,10 @@ const { Entries } = require('../../models');
 router.get('/', (req, res) => {
   Entries.findAll({}).then(entries => {
     res.json(entries);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
   });
 });
 
@@ -16,6 +20,10 @@ router.get('/:id', (req, res) => {
     }
   }).then(entries => {
     res.json(entries);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
   });
 });
 
@@ -27,28 +35,35 @@ router.get('/:zipcode', (req, res) => {
     }
   }).then(zipcode => {
     res.json(zipcode);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
   });
 });
 
 // POST entries
-router.post('/', ({ body }, res) => {
-  const { UserId, name, zipcode, date, mask, distance, sanitizer, patrons, comment } = body;
+router.post('/', (req, res) => {
+  const { name, zipcode, date, mask, distance, sanitizer, vaccineCard, comment } = req.body;
   Entries.create(
     {
-      // comment in when login is functional
-      // UserId = req.session.user_id,
-      UserId,
+      UserId: req.session.user_id,
       name,
       zipcode,
       date,
       mask,
       distance,
       sanitizer,
-      patrons,
+      vaccineCard,
       comment
     }
   ).then(dbres => {
+      console.log(dbres)
       res.json(dbres)
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
   });
 });
 

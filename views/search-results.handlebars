@@ -1,0 +1,86 @@
+<div class="flex flex-col">
+  <div class="my-2 md:w-screen w-screen h-screen">
+    <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+      <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+     
+        <table class="min-w-full table-auto divide-y divide-gray-200">
+          <thead class="bg-gray-50">
+            
+            <tr>
+              <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Venue 
+              </th>
+              <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Zip Code
+              </th>
+              <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Date Visited
+              </th>
+              <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Mask Usage 
+                <br>
+                1=poor
+                <br>
+                5=great
+              </th>
+              <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Social Distancing 
+                <br>
+                1=poor
+                <br>
+                5=great
+              </th>
+              <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Was Sanitizer Available 
+              </th>
+              <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Were Vaccine Cards Required 
+              </th>
+              <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Comments 
+              </th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200">
+            {{#each modifiedData}}
+            <tr>
+              <td class="px-6 py-4 whitespace-normal">
+                <div class="flex items-center">
+                  <div class="ml-4">
+                    <div class="text-sm font-medium text-gray-900">                      
+                      {{name}}
+                    </div>
+                  </div>
+                </div>
+              </td>
+              
+              <td class="px-6 py-4 whitespace-normal">
+                <div class="text-sm text-center text-gray-500">{{zipcode}}</div>
+              </td>
+              <td class="px-6 py-4 whitespace-normal">
+                <div class="text-sm text-center text-gray-500">{{date}}</div>
+              </td>
+              <td class="px-6 py-4 whitespace-normal">
+                <div class="text-sm text-center text-gray-500">{{{mask}}}</div>
+              </td>
+              <td class="px-6 py-4 whitespace-normal">
+                <div class="text-sm text-center text-gray-500">{{{distance}}}</div>
+              </td>
+              <td class="px-6 py-4 whitespace-normal">
+                <div class="text-sm text-center text-gray-500">{{sanitizer}}</div>
+              </td>
+              <td class="px-6 py-4 whitespace-normal">
+                <div class="text-sm text-center text-gray-500">{{vaccineCard}}</div>
+              </td>
+              <td class="px-6 py-4 whitespace-normal">
+                <div class="text-sm text-left text-gray-500">{{comment}}</div>
+              </td>
+              {{/each}}
+            </tr>
+          </tbody>
+        </table>
+        
+      </div>
+    </div>
+  </div>
+</div>

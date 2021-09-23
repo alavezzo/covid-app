@@ -1,0 +1,134 @@
+<form class="new-entry-form w-full max-w-lg h-screen">
+  <div class="flex flex-wrap -mx-3 mb-6">
+    <div class="w-full px-3">
+      <label class="block uppercase tracking-wide text-white text-xs font-bold mb-2" for="grid-business">
+        Business Name
+      </label>
+      <input name='entry-name'
+        class="appearance-none block w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+        id="grid-business" type="text" placeholder="Hollywood Bowl">
+    </div>
+  </div>
+  <div class="flex flex-wrap -mx-3 mb-6">
+    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-white text-xs font-bold mb-2" for="grid-zipcode">
+        Zipcode
+      </label>
+      <input name="entry-zipcode"
+        class="appearance-none block w-full bg-gray-200 text-black border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+        id="grid-zipcode" type="text" placeholder="Zipcode">
+    </div>
+    <div class="w-full md:w-1/2 px-3">
+      <label class="block uppercase tracking-wide text-white text-xs font-bold mb-2" for="grid-date">
+        Date
+      </label>
+      <p><input name="entry-date" type="text" id="datepicker"
+          class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          id="grid-state"></p>
+    </div>
+  </div>
+  <div class="flex flex-wrap -mx-3 mb-6">
+    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-white text-xs font-bold mb-2" for="grid-mask">
+        Is everyone masked?
+      </label>
+      <div class="relative">
+        <select name="entry-mask"
+          class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          id="grid-state">
+          <option>1 - none masked</option>
+          <option>2 - some masked</option>
+          <option>3 - half masked</option>
+          <option>4 - majority masked</option>
+          <option>5 - all masked</option>
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="w-full md:w-1/2 px-3">
+      <label class="block uppercase tracking-wide text-white text-xs font-bold mb-2" for="grid-distance">
+        Social Distancing
+      </label>
+      <div class="relative">
+        <select name="entry-distance"
+          class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          id="grid-state">
+          <option>1 - none distanced</option>
+          <option>2 - few distanced</option>
+          <option>3 - moderately distanced</option>
+          <option>4 - majority distanced</option>
+          <option>5 - everyone distanced</option>
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-wrap -mx-3 mb-6">
+    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-white text-xs font-bold mb-2" for="grid-sanitizer">
+        Is Sanitizer Available?
+      </label>
+      <div class="relative">
+        <select name="entry-sanitizer"
+          class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          id="grid-state">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="w-full md:w-1/2 px-3">
+      <label class="block uppercase tracking-wide text-white text-xs font-bold mb-2" for="grid-patrons">
+        Are Vaccination Cards Required?
+      </label>
+      <div class="relative">
+        <select name="entry-card"
+          class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          id="grid-state">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-wrap -mx-3 mb-6">
+    <div class="w-full px-3">
+      <label class="block uppercase tracking-wide text-white text-xs font-bold mb-2" for="grid-comments">
+        Comments
+      </label>
+      <textarea name="entry-comment"
+        class="appearance-none block w-full bg-gray-200 text-black border border-gray-200 rounded py-2 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"></textarea>
+    </div>
+  </div>
+
+
+
+  <div class="flex items-center justify-between pt-4">
+    <button
+      role="alert "class="bg-gradient-to-r from-purple-800 to-green-500 hover:from-pink-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
+      type="submit">
+      Post
+      
+    </button>
+
+</form>
+
+<script src="/js/add-entry.js"></script>

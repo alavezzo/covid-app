@@ -1,0 +1,10 @@
+.scroller {
+    animation: 15s scroll alternate infinite;
+  }
+  @keyframes scroll {
+    from { transform: translateY(0%);
+    }
+    to {
+      transform: translateY(-50%)
+    }
+  }
