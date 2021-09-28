@@ -2,9 +2,9 @@
     animation: 15s scroll alternate infinite;
   }
   @keyframes scroll {
-    from { transform: translateY(0%);
+    from { transform: translateY(-25%);
     }
     to {
-      transform: translateY(-50%)
+      transform: translateY(-75%)
     }
   }
