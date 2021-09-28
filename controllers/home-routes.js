@@ -64,7 +64,7 @@ router.get('/zipcode/:zipcode', withAuth, (req, res) => {
 
         let modifiedData = modifyData(data)
 
-        res.render('search-results', { modifiedData, id: true});
+        res.render('search-results', { modifiedData, id: true, searchResults: true});
         // console.log(dbRes);
     });
 });
